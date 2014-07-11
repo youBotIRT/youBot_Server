@@ -1,0 +1,9 @@
+#!/bin/sh
+
+gnome-terminal --title="JoyPad"   --command="../youBot_JoyPad/Release/youBot_JoyPad"&
+gnome-terminal --title="UDP 6500" --command="../youBot_UDP/Release/youBot_UDP 6500"&
+gnome-terminal --title="UDP 6501" --command="../youBot_UDP/Release/youBot_UDP 6501"&
+gnome-terminal --title="UDP 6502" --command="../youBot_UDP/Release/youBot_UDP 6502"&
+gnome-terminal --title="UDP 6503" --command="../youBot_UDP/Release/youBot_UDP 6503"&
+gnome-terminal --title="Info" --command="../youBot_Info/Release/youBot_Info"&
+gnome-terminal --title="Server" --command="../youBot_Server/Release/youBot_Server"

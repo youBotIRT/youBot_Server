@@ -1,0 +1,48 @@
+PROJECT(youBot_Monitor)
+CMAKE_MINIMUM_REQUIRED(VERSION 2.6)
+
+
+########### cmake configuration and compiler flags ###########
+SET(CMAKE_BUILD_TYPE Release)
+SET(CMAKE_C_FLAGS_DEBUG "-fPIC -Wall -g")
+SET(CMAKE_CXX_FLAGS_DEBUG "-fPIC -Wall -g")
+SET(CMAKE_C_FLAGS_RELEASE "-fPIC -Wall")
+SET(CMAKE_CXX_FLAGS_RELEASE "-fPIC -Wall")
+SET(LIBRARY_OUTPUT_PATH ${PROJECT_SOURCE_DIR}/lib) #static libraries
+SET(EXECUTABLE_OUTPUT_PATH ${PROJECT_SOURCE_DIR}/bin) #executables
+SET(CMAKE_LIBRARY_OUTPUT_DIRECTORY ${PROJECT_SOURCE_DIR}/lib) #dynamic libraries (plugins)
+
+
+
+FIND_PATH(YOUBOT_CLIENT_SRC NAMES Client.hpp
+  PATHS
+  ${PROJECT_SOURCE_DIR}/../youBot_Client/src/
+  NO_DEFAULT_PATH
+)
+
+FIND_LIBRARY(YOUBOT_CLIENT_LIB NAMES "youBot_Client"
+  PATHS
+  ${PROJECT_SOURCE_DIR}/../youBot_Client/lib/
+  NO_DEFAULT_PATH
+)
+
+
+
+INCLUDE_DIRECTORIES(
+${YOUBOT_CLIENT_SRC}
+)
+
+ADD_EXECUTABLE(youBot_Monitor
+  ${PROJECT_SOURCE_DIR}/src/youBot_Monitor.cpp
+)
+
+TARGET_LINK_LIBRARIES(youBot_Monitor
+${YOUBOT_CLIENT_LIB}
+boost_thread
+zmq
+msgpack
+)
+
+
+
+
