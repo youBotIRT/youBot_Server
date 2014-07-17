@@ -20,5 +20,9 @@
 *.out
 *.app
 
+bin/
+lib/
+build/
 
 #~
+*~
