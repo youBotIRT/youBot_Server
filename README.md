@@ -25,8 +25,8 @@ Install libaries
     
 Setting Up Environment Variables
     
-    echo "YOUBOTDIR <your_youbot_diver_folder>" >> ~/.bashrc
-    echo "YOUBOT_CONFIG <your_youbot_diver_folder>/config" >> ~/.bashrc
+    echo "export YOUBOTDIR=<your_youbot_driver_folder>" >> ~/.bashrc
+    echo "export YOUBOT_CONFIG=<your_youbot_driver_folder>/config" >> ~/.bashrc
     source ~/.bashrc
 
 Compile youBotIRT
