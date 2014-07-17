@@ -19,9 +19,13 @@ Get Source:
 
 Install libaries
 
-    sudo apt-get install libzmq
-    sudo apt-get install libmsgpack
+    sudo apt-get install libzmq-dev
+    sudo apt-get install libmsgpack-dev
     sudo apt-get install libboost-all-dev
+    
+Setting Up Environment Variables
+    
+    
 
 Compile youBotIRT
 
@@ -34,7 +38,7 @@ Usage
 The included start script will start:
  * Server
  * JoyPad Node
- * 4 UDP Node (Ports 6500 - 6503)
+ * 4 UDP Nodes (Ports 6500 - 6503)
  * Info Node (Dispay)
 
 Start:
