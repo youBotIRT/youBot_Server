@@ -24,9 +24,10 @@ Install libaries
     sudo apt-get install libboost-all-dev
     
 Setting Up Environment Variables
+cd to your youbor driver folder 
     
-    echo "export YOUBOTDIR=<your_youbot_driver_folder>" >> ~/.bashrc
-    echo "export YOUBOT_CONFIG=<your_youbot_driver_folder>/config" >> ~/.bashrc
+    echo "export YOUBOTDIR=$(pwd)" >> ~/.bashrc
+    echo "export YOUBOT_CONFIG$(pwd)/config" >> ~/.bashrc
     source ~/.bashrc
 
 Compile youBotIRT
