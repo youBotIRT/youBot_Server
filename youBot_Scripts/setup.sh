@@ -69,6 +69,6 @@ make
 cd ../..
 
 echo 'Making Ethercat and the LCD Display accesable without Sudo'
-sudo setcap cap_net_raw+ep /youBot_Server/bin/youBot_Server
+sudo setcap cap_net_raw+ep youBot_Server/bin/youBot_Server
 sudo chmod 666 /dev/ttyACM0
 
