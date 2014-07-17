@@ -1,8 +1,0 @@
-#!/bin/sh
-
-#gnome-terminal  -e /home/youbot/Desktop/youBot_IRT/youBot_Monitor/Release/youBot_Monitor --geometry 100x15+1+10 & 
-killall youBot_Server 
-killall youBot_JoyPad
-killall youBot_UDP
-killall youBot_Monitor
-killall youBot_Info
