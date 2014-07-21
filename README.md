@@ -27,7 +27,7 @@ Setting Up Environment Variables
 cd to your youbor driver folder 
     
     echo "export YOUBOTDIR=$(pwd)" >> ~/.bashrc
-    echo "export YOUBOT_CONFIG$(pwd)/config" >> ~/.bashrc
+    echo "export YOUBOT_CONFIG=$(pwd)/config" >> ~/.bashrc
     source ~/.bashrc
 
 Compile youBotIRT
